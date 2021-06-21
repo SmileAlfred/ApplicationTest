@@ -1,0 +1,6 @@
+include ':app'
+rootProject.name='ApplicationTest'
+include ':wxamcastreceiver'
+include ':wxamcastsender'
+include ':WxMultiReceiverDemo'
+include ':WxAirplayReceiver'

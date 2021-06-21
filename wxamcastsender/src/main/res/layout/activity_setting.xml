@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_resolution"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/common_bg_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="24dp"
+            android:text="@string/set_resolution"
+            android:textColor="@color/textBlackColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:text="720P"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="18dp"
+            android:src="@mipmap/ic_next"
+
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/viewLineColor" />
+
+    <LinearLayout
+        android:id="@+id/ll_bit"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/common_bg_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="24dp"
+            android:text="@string/set_sharpness"
+            android:textColor="@color/textBlackColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_bit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:text="@string/cast_quality_middle"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="18dp"
+            android:src="@mipmap/ic_next"
+
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/viewLineColor" />
+
+    <LinearLayout
+        android:id="@+id/ll_mirror_model"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/common_bg_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="24dp"
+            android:text="@string/setting_mirror_model"
+            android:textColor="@color/textBlackColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_mirror_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:text="@string/setting_mirror_model_one"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="18dp"
+            android:src="@mipmap/ic_next"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

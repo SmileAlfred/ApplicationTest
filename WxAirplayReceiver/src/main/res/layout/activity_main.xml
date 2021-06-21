@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备名称"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+         android:layout_margin="16dp"
+
+        />
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设备名称"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Airplay 投屏画质"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+       />
+
+
+    <RadioGroup
+        android:id="@+id/rg_resolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_low_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="低画质"
+            android:layout_marginRight="18dp"
+            android:textSize="18sp"/>
+        <RadioButton
+            android:id="@+id/rb_high_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高画质"
+            android:checked="true"
+            android:textSize="18sp"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解码播放模式"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_margin="16dp"
+        />
+    <RadioGroup
+        android:id="@+id/rg_decode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_soft_decode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="软解码"
+            android:layout_marginRight="18dp"
+            android:textSize="18sp"/>
+        <RadioButton
+            android:id="@+id/rb_hard_decode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="硬解码"
+            android:checked="true"
+            android:textSize="18sp"/>
+    </RadioGroup>
+</LinearLayout>

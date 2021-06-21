@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MirrorSender</string>
+    <string name="network_status">网络状态</string>
+
+    <string name="ip_address">IP地址:</string>
+    <string name="device_connection">设备连接</string>
+    <string name="re_search">重新搜索</string>
+    <string name="only_link_one_device_tips">您已经投射了一台设备！</string>
+    <string name="action_settings">设置</string>
+
+    <string name="setting_surface">画面</string>
+    <string name="set_resolution">投屏分辨率</string>
+    <string name="setting_mirror_model">投屏模式</string>
+    <string name="set_sharpness">投屏清晰度</string>
+
+    <string name="setting_mirror_model_one">流畅优先</string>
+    <string name="setting_mirror_model_two">画质优先</string>
+    <string name="setting_mirror_model_three">高质量</string>
+
+    <string name="cast_quality_low">流畅</string>
+    <string name="cast_quality_middle">普通</string>
+    <string name="cast_quality_high">高清</string>
+    <string name="cast_quality_than_high">超清</string>
+
+    <string name="not_support_resolution">您的硬件不支持选择该分辨率</string>
+    <string name="not_support_model">您的硬件不支持该模式选择</string>
+
+</resources>
