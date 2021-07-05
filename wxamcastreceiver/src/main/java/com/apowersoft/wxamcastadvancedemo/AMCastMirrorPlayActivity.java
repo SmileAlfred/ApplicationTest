@@ -14,7 +14,6 @@ import com.apowersoft.amcast.advanced.api.AMCastReceiverAdvanced;
 import com.apowersoft.amcast.advanced.api.callback.AMCastViewCallback;
 import com.apowersoft.amcast.advanced.receiver.AndroidMirrorLayout;
 
-
 /**
  * author : Terry.Tao
  * date   : 2019/12/3
@@ -34,7 +33,6 @@ public class AMCastMirrorPlayActivity extends AppCompatActivity {
         initView();
         initPlayer();
     }
-
 
     private void initView() {
         ivExit = findViewById(R.id.exit_img);
@@ -61,7 +59,8 @@ public class AMCastMirrorPlayActivity extends AppCompatActivity {
             public void addView(AndroidMirrorLayout androidMirrorLayout, String ip) {
                 ipAddress = ip;
                 //添加解码播放部分
-                LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.MATCH_PARENT);
                 llp.weight = 1;
                 try {
                     llMainLayout.addView(androidMirrorLayout, llp);

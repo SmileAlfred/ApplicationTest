@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         initAMCastReceiver();
+        Intent intent = new Intent(MainActivity.this,
+                AMCastMirrorPlayActivity.class);
+        startActivity(intent);
     }
 
     private void initAMCastReceiver() {
