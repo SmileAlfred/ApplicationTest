@@ -6,13 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/et_key"
+        android:layout_width="184dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Key"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_value"
+        android:layout_width="181dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Value"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_key"
+        tools:ignore="MissingConstraints" />
+
     <TextView
+        android:id="@+id/tv_key"
+        android:layout_width="169dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="344dp"
+        android:layout_marginRight="344dp"
+        android:background="#33000000"
+        android:text="Key:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintStart_toEndOf="@+id/et_key"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="167dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="347dp"
+        android:layout_marginRight="347dp"
+        android:layout_marginBottom="23dp"
+        android:background="#33000000"
+        android:text="Value:"
+        app:layout_constraintBottom_toTopOf="@+id/btn_get"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintStart_toEndOf="@+id/et_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_key"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello 多贝云!"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:text="存"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_value"
+        app:layout_constraintVertical_bias="0.826"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginLeft="119dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="264dp"
+        android:layout_marginRight="264dp"
+        android:layout_marginBottom="196dp"
+        android:text="取"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/tv_value"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="79dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="321dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_key"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
