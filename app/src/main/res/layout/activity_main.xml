@@ -6,12 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_camerademo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:text="相机demo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_value"
+        app:layout_constraintVertical_bias="0.228"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/et_key"
         android:layout_width="184dp"
         android:layout_height="38dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Key"
@@ -24,9 +39,9 @@
         android:id="@+id/et_value"
         android:layout_width="181dp"
         android:layout_height="42dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Value"
         android:inputType="phone"
@@ -46,7 +61,7 @@
         android:background="#33000000"
         android:text="Key:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toEndOf="@+id/et_key"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -57,7 +72,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="95dp"
         android:layout_marginLeft="95dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="347dp"
         android:layout_marginRight="347dp"
         android:layout_marginBottom="23dp"
@@ -65,25 +80,25 @@
         android:text="Value:"
         app:layout_constraintBottom_toTopOf="@+id/btn_get"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toEndOf="@+id/et_value"
-        app:layout_constraintTop_toBottomOf="@+id/tv_key"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="200dp"
         android:text="存"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_value"
-        app:layout_constraintVertical_bias="0.826"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -92,32 +107,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="119dp"
         android:layout_marginLeft="119dp"
-        android:layout_marginTop="23dp"
         android:layout_marginEnd="264dp"
         android:layout_marginRight="264dp"
-        android:layout_marginBottom="196dp"
+        android:layout_marginBottom="496dp"
         android:text="取"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toEndOf="@+id/btn_save"
-        app:layout_constraintTop_toBottomOf="@+id/tv_value"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="79dp"
-        android:layout_marginLeft="79dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="321dp"
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_key"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
