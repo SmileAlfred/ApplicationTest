@@ -30,6 +30,8 @@ import java.util.List;
  * 4. 为捕获设置侦听器 - 为界面控件连接侦听器，以便启用图像或视频捕获来响应用户操作，例如按下按钮。
  * 5. 捕获并保存文件 - 创建用于捕获图片或视频并保存输出的代码。
  * 6. 释放相机 - 在用完相机之后，您的应用必须正确地释放相机，以便其他应用使用。
+ *
+ * 人脸检测参考了 https://blog.csdn.net/renlei0109/article/details/49911695
  */
 public class CameraActivity extends Activity {
 
