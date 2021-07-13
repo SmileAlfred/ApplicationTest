@@ -43,7 +43,6 @@ public class CameraUtils {
 
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "MyCameraApp");
-        Log.i(TAG, "getOutputMediaFile: path = " + mediaStorageDir.getAbsolutePath().toString());
         // This location works best if you want the created images to be shared
         // between applications and persist after your app has been uninstalled.
 

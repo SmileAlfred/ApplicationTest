@@ -15,7 +15,7 @@ public class CameraCallBack implements Camera.PictureCallback {
 
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
-        //1 为图片， 2 为 视频
+
         File pictureFile = getOutputMediaFile(1);
         if (pictureFile == null) {
             Log.d(TAG, "Error creating media file, check storage permissions");
@@ -32,4 +32,5 @@ public class CameraCallBack implements Camera.PictureCallback {
             Log.d(TAG, "Error accessing file: " + e.getMessage());
         }
     }
+
 }

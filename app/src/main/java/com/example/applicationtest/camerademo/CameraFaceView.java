@@ -10,7 +10,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
 import android.util.AttributeSet;
-import android.util.Log;
 
 import com.example.applicationtest.R;
 
@@ -38,7 +37,6 @@ public class CameraFaceView extends androidx.appcompat.widget.AppCompatImageView
     public void setFaces(Camera.Face[] faces) {
         this.mFaces = faces;
         invalidate();
-        Log.d(TAG, "invalidate ; mFaces = " + mFaces + "; length = " + mFaces.length);
     }
 
     public void clearFaces() {
@@ -63,7 +61,6 @@ public class CameraFaceView extends androidx.appcompat.widget.AppCompatImageView
                 mMatrix.mapRect(rectF);
                 Rect newRect = new Rect(Math.round(rectF.left), Math.round(rectF.top), Math.round(rectF.right), Math.round(rectF.bottom));
                 mFaceIndicator.setBounds(newRect);
-                Log.i(TAG, "onDraw: rectF = " + Math.round(rectF.left) + " ; " + Math.round(rectF.top) + " ; " + Math.round(rectF.right) + " ; " + Math.round(rectF.bottom));
                 canvas.drawRect(newRect,mLinePaint);
                 mFaceIndicator.draw(canvas);
             }

@@ -21,13 +21,28 @@
             android:layout_height="match_parent" />
     </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/button_capture"
+    <TextView
+        android:id="@+id/tv_captrue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_launcher"
-        android:text="Capture"
-        android:layout_alignParentRight="true" />
+        android:layout_margin="20dp"
+        android:background="#FF0000"
+        android:padding="3dp"
+        android:text="📷" />
+
+    <TextView
+        android:id="@+id/tv_lu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_captrue"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:background="#FF0000"
+        android:padding="3dp"
+        android:text="📹"
+        android:textColor="#FFF" />
 </RelativeLayout>
