@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
@@ -27,7 +28,12 @@ public class MainActivity extends Activity {
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final int LOCATION_PERMISSION_CODE = 2;
     public final String TAG = MainActivity.class.getSimpleName().toString();
-    public final String pathName = Environment.getExternalStorageDirectory() + File.separator + "Android" + File.separator + ".Secret";
+    //public final String pathName = Environment.getExternalStorageDirectory() + File.separator + "Android" + File.separator + ".Secret";
+    public final String pathName ="";
+
+    EditText etKey,etValue;
+    TextView tvKey, tvValue;
+    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2;
 
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -39,15 +45,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText etKey = findViewById(R.id.et_key);
-        final EditText etValue = findViewById(R.id.et_value);
-        final TextView tvKey = findViewById(R.id.tv_key);
-        final TextView tvValue = findViewById(R.id.tv_value);
-
-        Button btn_Save = findViewById(R.id.btn_save);
-        Button btn_Get = findViewById(R.id.btn_get);
-        Button btn_Clear = findViewById(R.id.btn_clear);
-        Button btn_camerademo2 = findViewById(R.id.btn_camerademo2);
+        etKey = findViewById(R.id.et_key);
+        etValue = findViewById(R.id.et_value);
+        tvKey = findViewById(R.id.tv_key);
+        tvValue = findViewById(R.id.tv_value);
+        btn_Save = findViewById(R.id.btn_save);
+        btn_Get = findViewById(R.id.btn_get);
+        btn_Clear = findViewById(R.id.btn_clear);
+        btn_camerademo2 = findViewById(R.id.btn_camerademo2);
         verifyPermissions(this);
 
         btn_Save.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +82,17 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+    }
+
+    public int add(int num1, int num2) {
+        Toast.makeText(MainActivity.this,"测试单元",Toast.LENGTH_SHORT );
+        Log.i(TAG, "add: 单元测试～");
+        return num1 + num2 - 1;
+    }
+
+    public String printUUID() {
+        System.out.println("MainActivity 中");
+        return MUtils.generateNewUUId();
     }
 
     /**

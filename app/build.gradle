@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.applicationtest"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -27,4 +27,18 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    //uiautomator
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+
+    //Espresso
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+
+    // PowerMock brings in the mockito dependency
+    testImplementation "org.powermock:powermock-module-junit4:2.0.9"
+    testImplementation "org.powermock:powermock-module-junit4-rule:2.0.9"
+    testImplementation "org.powermock:powermock-api-mockito2:2.0.9"
+    testImplementation "org.powermock:powermock-classloading-xstream:2.0.9"
 }

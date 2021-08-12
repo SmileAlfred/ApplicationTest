@@ -1,4 +1,4 @@
-package com.example.applicationtest;
+package com.example.exoplayertest;
 
 import org.junit.Test;
 
