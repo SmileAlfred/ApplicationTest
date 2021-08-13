@@ -105,15 +105,12 @@
         android:id="@+id/btn_get"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="119dp"
-        android:layout_marginLeft="119dp"
+        android:layout_marginStart="160dp"
         android:layout_marginEnd="264dp"
-        android:layout_marginRight="264dp"
         android:layout_marginBottom="496dp"
         android:text="取"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
         app:layout_constraintStart_toEndOf="@+id/btn_save"
         tools:ignore="MissingConstraints" />
 
@@ -130,5 +127,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.453" />
+
+    <Button
+        android:id="@+id/btn_bubble"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="184dp"
+        android:autofillHints="password"
+        android:text="气泡通知"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camerademo2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

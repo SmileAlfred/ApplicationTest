@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity  implements View.OnClickListener {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final int LOCATION_PERMISSION_CODE = 2;
@@ -33,7 +32,7 @@ public class MainActivity extends Activity {
 
     EditText etKey,etValue;
     TextView tvKey, tvValue;
-    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2;
+    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2,btn_bubble;
 
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -52,36 +51,19 @@ public class MainActivity extends Activity {
         btn_Save = findViewById(R.id.btn_save);
         btn_Get = findViewById(R.id.btn_get);
         btn_Clear = findViewById(R.id.btn_clear);
+        btn_bubble = findViewById(R.id.btn_bubble);
         btn_camerademo2 = findViewById(R.id.btn_camerademo2);
+
+        btn_camerademo2.setOnClickListener(this);
+        btn_Save.setOnClickListener(this);
+        btn_Get.setOnClickListener(this);
+        btn_Clear.setOnClickListener(this);
+        btn_bubble.setOnClickListener(this);
+
+
+
         verifyPermissions(this);
 
-        btn_Save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveMap(etKey.getText().toString(), etValue.getText().toString());
-            }
-        });
-        btn_Get.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String key = etKey.getText().toString();
-                tvKey.setText("Key:" + key);
-                tvValue.setText(getMap(key));
-            }
-        });
-        btn_Clear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearPro();
-            }
-        });
-        btn_camerademo2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public int add(int num1, int num2) {
@@ -160,6 +142,32 @@ public class MainActivity extends Activity {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+     switch (v.getId()){
+         case R.id.btn_camerademo2:
+             Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+             startActivity(intent);
+             break;
+         case R.id.btn_bubble:
+             break;
+         case R.id.btn_save:
+             saveMap(etKey.getText().toString(), etValue.getText().toString());
+             break;
+         case R.id.btn_get:
+             String key = etKey.getText().toString();
+             tvKey.setText("Key:" + key);
+             tvValue.setText(getMap(key));
+             break;
+         case R.id.btn_clear:
+             clearPro();
+             break;
+         default:
+             break;
+     }
+
     }
 
 }
