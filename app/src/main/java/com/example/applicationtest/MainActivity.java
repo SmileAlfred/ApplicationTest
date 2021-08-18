@@ -34,7 +34,7 @@ public class MainActivity extends Activity  implements View.OnClickListener {
 
     EditText etKey,etValue;
     TextView tvKey, tvValue;
-    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2,btn_bubble;
+    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2,btn_bubble,btn_material;
     ToggleButton toggleButton;
 
     private static String[] PERMISSIONS_STORAGE = {
@@ -57,12 +57,14 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         btn_bubble = findViewById(R.id.btn_bubble);
         btn_camerademo2 = findViewById(R.id.btn_camerademo2);
         toggleButton = findViewById(R.id.togglebtn);
+        btn_material = findViewById(R.id.btn_material);
 
         btn_camerademo2.setOnClickListener(this);
         btn_Save.setOnClickListener(this);
         btn_Get.setOnClickListener(this);
         btn_Clear.setOnClickListener(this);
         btn_bubble.setOnClickListener(this);
+        btn_material.setOnClickListener(this);
 
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -177,6 +179,9 @@ public class MainActivity extends Activity  implements View.OnClickListener {
          case R.id.btn_clear:
              clearPro();
              break;
+         case R.id.btn_material:
+              intent = new Intent(MainActivity.this, MaterialBtnActivity.class);
+             startActivity(intent);break;
          default:
              break;
      }

@@ -159,4 +159,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055" />
 
+    <Button
+        android:id="@+id/btn_material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="422dp"
+        android:text="MaterialBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/togglebtn"
+        app:layout_constraintTop_toBottomOf="@+id/btn_clear" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
