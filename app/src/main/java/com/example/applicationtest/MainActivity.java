@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import androidx.core.app.ActivityCompat;
 
@@ -33,6 +35,7 @@ public class MainActivity extends Activity  implements View.OnClickListener {
     EditText etKey,etValue;
     TextView tvKey, tvValue;
     Button btn_Save,btn_Get,btn_Clear,btn_camerademo2,btn_bubble;
+    ToggleButton toggleButton;
 
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -53,6 +56,7 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         btn_Clear = findViewById(R.id.btn_clear);
         btn_bubble = findViewById(R.id.btn_bubble);
         btn_camerademo2 = findViewById(R.id.btn_camerademo2);
+        toggleButton = findViewById(R.id.togglebtn);
 
         btn_camerademo2.setOnClickListener(this);
         btn_Save.setOnClickListener(this);
@@ -60,7 +64,16 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         btn_Clear.setOnClickListener(this);
         btn_bubble.setOnClickListener(this);
 
-
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(MainActivity.this,"isChecked",500).show();
+                } else {
+                    // The toggle is disabled
+                    Toast.makeText(MainActivity.this,"no Checked",500).show();
+                }
+            }
+        });
 
         verifyPermissions(this);
 
