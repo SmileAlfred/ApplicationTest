@@ -1,8 +1,8 @@
 package com.example.applicationtest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * materailBtn

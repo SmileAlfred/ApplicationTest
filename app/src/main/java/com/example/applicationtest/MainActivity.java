@@ -24,17 +24,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class MainActivity extends Activity  implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final int LOCATION_PERMISSION_CODE = 2;
     public final String TAG = MainActivity.class.getSimpleName().toString();
     //public final String pathName = Environment.getExternalStorageDirectory() + File.separator + "Android" + File.separator + ".Secret";
-    public final String pathName ="";
+    public final String pathName = "";
 
-    EditText etKey,etValue;
+    EditText etKey, etValue;
     TextView tvKey, tvValue;
-    Button btn_Save,btn_Get,btn_Clear,btn_camerademo2,btn_bubble,btn_material;
+    Button btn_Save, btn_Get, btn_Clear, btn_camerademo2, btn_bubble, btn_material, btn_hdmi,btn_ring;
     ToggleButton toggleButton;
 
     private static String[] PERMISSIONS_STORAGE = {
@@ -58,6 +58,8 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         btn_camerademo2 = findViewById(R.id.btn_camerademo2);
         toggleButton = findViewById(R.id.togglebtn);
         btn_material = findViewById(R.id.btn_material);
+        btn_hdmi = findViewById(R.id.btn_hdmi);
+        btn_ring = findViewById(R.id.btn_ring);
 
         btn_camerademo2.setOnClickListener(this);
         btn_Save.setOnClickListener(this);
@@ -65,14 +67,16 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         btn_Clear.setOnClickListener(this);
         btn_bubble.setOnClickListener(this);
         btn_material.setOnClickListener(this);
+        btn_hdmi.setOnClickListener(this);
+        btn_ring.setOnClickListener(this);
 
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Toast.makeText(MainActivity.this,"isChecked",500).show();
+                    Toast.makeText(MainActivity.this, "isChecked", 500).show();
                 } else {
                     // The toggle is disabled
-                    Toast.makeText(MainActivity.this,"no Checked",500).show();
+                    Toast.makeText(MainActivity.this, "no Checked", 500).show();
                 }
             }
         });
@@ -82,7 +86,7 @@ public class MainActivity extends Activity  implements View.OnClickListener {
     }
 
     public int add(int num1, int num2) {
-        Toast.makeText(MainActivity.this,"测试单元",Toast.LENGTH_SHORT );
+        Toast.makeText(MainActivity.this, "测试单元", Toast.LENGTH_SHORT);
         Log.i(TAG, "add: 单元测试～");
         return num1 + num2 - 1;
     }
@@ -152,6 +156,7 @@ public class MainActivity extends Activity  implements View.OnClickListener {
         int permissions = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_COARSE_LOCATION);
         ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
+        ActivityCompat.checkSelfPermission(activity, Manifest.permission.RECEIVE_BOOT_COMPLETED);
 
         if (permissions != PackageManager.PERMISSION_GRANTED) {
             // We don't have permission so prompt the user
@@ -161,30 +166,42 @@ public class MainActivity extends Activity  implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-     switch (v.getId()){
-         case R.id.btn_camerademo2:
-             Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-             startActivity(intent);
-             break;
-         case R.id.btn_bubble:
-             break;
-         case R.id.btn_save:
-             saveMap(etKey.getText().toString(), etValue.getText().toString());
-             break;
-         case R.id.btn_get:
-             String key = etKey.getText().toString();
-             tvKey.setText("Key:" + key);
-             tvValue.setText(getMap(key));
-             break;
-         case R.id.btn_clear:
-             clearPro();
-             break;
-         case R.id.btn_material:
-              intent = new Intent(MainActivity.this, MaterialBtnActivity.class);
-             startActivity(intent);break;
-         default:
-             break;
-     }
+        switch (v.getId()) {
+            case R.id.btn_camerademo2:
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_bubble:
+                break;
+            case R.id.btn_save:
+                saveMap(etKey.getText().toString(), etValue.getText().toString());
+                break;
+            case R.id.btn_get:
+                String key = etKey.getText().toString();
+                tvKey.setText("Key:" + key);
+                tvValue.setText(getMap(key));
+                break;
+            case R.id.btn_clear:
+                clearPro();
+                break;
+            case R.id.btn_material:
+                intent = new Intent(MainActivity.this, MaterialBtnActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_hdmi:
+                LocalHDMIAudioUtil localHDMIAudioUtil = new LocalHDMIAudioUtil();
+                break;
+            case R.id.btn_ring:
+                LocalRingManagement mLocalRingManagement = LocalRingManagement.getInstance();
+                if(mLocalRingManagement.isPlaying()){
+                    mLocalRingManagement.stop();
+                    break;
+                }
+                mLocalRingManagement.playMusic(R.raw.called,MainActivity.this);
+                break;
+            default:
+                break;
+        }
 
     }
 

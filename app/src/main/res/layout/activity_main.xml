@@ -173,5 +173,25 @@
         app:layout_constraintStart_toEndOf="@+id/togglebtn"
         app:layout_constraintTop_toBottomOf="@+id/btn_clear" />
 
+    <Button
+        android:id="@+id/btn_hdmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="HDMI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bubble" />
+
+    <Button
+        android:id="@+id/btn_ring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="45dp"
+        android:text="响一下"
+        app:layout_constraintStart_toEndOf="@+id/btn_hdmi"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bubble" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
