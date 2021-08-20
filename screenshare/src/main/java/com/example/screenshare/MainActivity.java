@@ -26,6 +26,7 @@ import com.example.screenshare.util.ScreenShotHelper;
 /**
  * @author by talon, Date on 2020/6/20.
  * note: 主界面
+ * https://juejin.cn/post/6995362661571493919
  */
 public class MainActivity extends AppCompatActivity implements ScreenShotHelper.OnScreenShotListener {
 
