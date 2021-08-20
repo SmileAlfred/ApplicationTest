@@ -11,7 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="200dp"
         android:text="相机demo"
@@ -26,7 +25,6 @@
         android:layout_width="184dp"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Key"
@@ -40,7 +38,6 @@
         android:layout_width="181dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Value"
@@ -54,7 +51,6 @@
         android:layout_width="169dp"
         android:layout_height="34dp"
         android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="344dp"
         android:layout_marginRight="344dp"
@@ -71,7 +67,6 @@
         android:layout_width="167dp"
         android:layout_height="32dp"
         android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="347dp"
         android:layout_marginRight="347dp"
@@ -91,7 +86,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="200dp"
         android:text="存"
@@ -120,7 +114,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginBottom="321dp"
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -192,6 +185,15 @@
         android:text="响一下"
         app:layout_constraintStart_toEndOf="@+id/btn_hdmi"
         app:layout_constraintTop_toBottomOf="@+id/btn_bubble" />
+
+    <Button
+        android:id="@+id/btn_3d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101dp"
+        android:text="3D效果"
+        app:layout_constraintTop_toBottomOf="@+id/btn_material"
+        tools:layout_editor_absoluteX="274dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

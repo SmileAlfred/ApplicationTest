@@ -17,6 +17,7 @@ import android.widget.ToggleButton;
 import androidx.core.app.ActivityCompat;
 
 import com.example.applicationtest.camerademo.CameraActivity;
+import com.example.applicationtest.threedrotation.ThreeDimensionsRotationActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,7 +35,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     EditText etKey, etValue;
     TextView tvKey, tvValue;
-    Button btn_Save, btn_Get, btn_Clear, btn_camerademo2, btn_bubble, btn_material, btn_hdmi,btn_ring;
+    Button btn_Save, btn_Get, btn_Clear, btn_camerademo2, btn_bubble, btn_material, btn_hdmi,btn_ring,btn_3d;
     ToggleButton toggleButton;
 
     private static String[] PERMISSIONS_STORAGE = {
@@ -60,6 +61,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn_material = findViewById(R.id.btn_material);
         btn_hdmi = findViewById(R.id.btn_hdmi);
         btn_ring = findViewById(R.id.btn_ring);
+        btn_3d = findViewById(R.id.btn_3d);
 
         btn_camerademo2.setOnClickListener(this);
         btn_Save.setOnClickListener(this);
@@ -69,6 +71,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn_material.setOnClickListener(this);
         btn_hdmi.setOnClickListener(this);
         btn_ring.setOnClickListener(this);
+        btn_3d.setOnClickListener(this);
 
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -198,6 +201,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     break;
                 }
                 mLocalRingManagement.playMusic(R.raw.called,MainActivity.this);
+                break;
+            case R.id.btn_3d:
+                startActivity(new Intent(MainActivity.this, ThreeDimensionsRotationActivity.class));
                 break;
             default:
                 break;
